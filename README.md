@@ -103,19 +103,10 @@ Ensuite vous allez créer un fichier de profil pour personnaliser votre programm
 ```
 nano .bash_profile
 ```
-Et ajoutez ces 2 lignes suivantes :
+Et ajoutez ces 2 lignes suivantes puis **ctrl + x** pour quitter et **Y** ou **O** pour enregistrer avant de quitter :
 ```
-1.  # Raccourci pour configurer nginx
-2. alias ..nginx="cd /usr/local/etc/nginx/"
-3. 
-
-
-
-
-
-
-^G Aide        ^O Écrire      ^W Chercher    ^K Couper      ^J Justifier   ^C Pos. cur.   M-U Annuler
-^X Quitter     ^R Lire fich.  ^\ Remplacer   ^U Coller      ^T Orthograp.  ^_ Aller ligne M-E Refaire
+# Raccourci pour configurer nginx
+alias ..nginx="cd /usr/local/etc/nginx/"
 ```
 
 ### Configuration nginx
