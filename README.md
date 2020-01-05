@@ -190,7 +190,7 @@ mkdir -p sites-{enabled,available}
 cd sites-available
 nano default.conf
 ```
-Insérez les lignes du fichiers [default.conf](sites-availabledefault.conf) ou copiez le fichier directement dans le répertoire, c'est comme vous le souhaitez.
+Insérez les lignes du fichiers [default.conf](sites-available/default.conf) ou copiez le fichier directement dans le répertoire, c'est comme vous le souhaitez.
 
 #### SSL
 
