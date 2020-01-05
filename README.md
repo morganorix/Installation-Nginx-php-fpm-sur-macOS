@@ -138,9 +138,9 @@ Voici la partie la plus délicate. Rien de bien compliqué en revanche aller tro
 J'aime reprendre les bests practice de linux. Et comme par hasard sur macOSx c'est presque pareil...enfin presque...
 
 #### Dossier de travail
-Tout d'abord nous allons créer un répertoire de travail pour le développement. Tout vos sites internet seront dans ce répertoire et facile à trouver.
+Tout d'abord nous allons créer un répertoire de travail pour le développement. Tout vos sites internets seront dans ce répertoire et facile à trouver.
 
-Vous vous souvenez qu'en début de turoriel, j'ai expliqué que macOSx possède un serveur apache pré-installé... et donc il possède un répertoire pour le développement... très bien caché. Tellement que c'est un dossier caché... donc pas facile à trouver un pour un néophyte.<br />
+Vous vous souvenez qu'en début de turoriel, j'ai expliqué que macOSx possède un serveur apache pré-installé... et donc il possède un répertoire pour le développement... très bien caché. Tellement que c'est un dossier caché... donc pas facile à trouver pour un néophyte.<br />
 Voici ou il se cache :
 ```
 cd /usr/local/var/www/
@@ -155,6 +155,9 @@ cd ~/
 mkdir -p Sites
 ```
 
+Voici un aperçu de ce que vous devez avoir avec **Finder**
+
+![Aperçu Finder](/images/apercu-finder.png)
 
 #### nginx.conf
 #### Création des dossiers de conf
