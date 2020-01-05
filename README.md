@@ -2,10 +2,12 @@
 
 ## Sommaire
 * [Introduction](#introduction)
+* [Préparation] (#preparation)
+  * [Oh my zsh](#oh-my-zsh)
+  * [Alias bash profile](#alias-bash-profile)
 * [Installation homebrew](#installation-homebrew)
 * [Installation php-fpm](#installation-php-fpm)
 * [Installation nginx](#installation-nginx)
-  * [Aliases bash profile](#aliases-bash-profile)
   * [Configuration nginx](#configuration-nginx)
 * [Configuration fichier hosts](#configuration-fichier-hosts)
 * [Installation serveur sql](#installation-serveur-sql)
@@ -13,6 +15,36 @@
 ## Introduction
 Par défaut macOSx à un serveur non actif Apache pré-installé ainsi qu'un serveur php (il n'y a pas de serveur sql de pré-installé). Si vous êtes comme moi, je préfère de loin un serveur Nginx. De plus les versions sont pas forcément à jour sur votre mac. Autant de raisons qui font que ne nous voulons pas les activer.<br />
 Grâce à **Homebrew** nous pouvons installer un serveur **Nginx**, serveur **Php-fpm** et serveur **Sql** à jour et facile à maintenir.
+
+## Préparation
+Je ne sais pas pour vous, de mon côté j'aime travailler dans un minimum de confort et pouvoir entrer des commandes facile et personnalisées avec un terminal un peu custom.<br />
+
+### Oh my zsh
+Customisation du terminal sur ce lien : [https://ohmyz.sh/](https://ohmyz.sh/)<br />
+Ou pour le plus fénéants :
+```
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+### Alias bash profile
+Tout d'abord il faut se rendre dans votre répertoire de travail. J'entends par là votre dossier commençant par **~** appelé tilde ou encore la nouille. :stuck_out_tongue:
+
+```
+cd ~/
+```
+
+Ensuite vous allez créer un fichier de profil pour personnaliser votre programme shell. ET entre autre créer des alias ou commandes raccourcis.
+```
+nano .bash_profile
+```
+
+Puis ajoutez ces 2 lignes suivantes puis **ctrl + x** pour quitter et **Y** ou **O** pour enregistrer avant de quitter :
+```
+# Raccourci pour configurer nginx
+alias ..nginx="cd /usr/local/etc/nginx/"
+```
+
+Voici une liste de mes [alias](https://github.com/geekoun/Installation-Nginx-php-fpm-sur-macOS/blob/master/.bash_profile) pour le plus curieux :stuck_out_tongue:
 
 ## Installation homebrew
 Rendez-vous sur [https://brew.sh/index_fr](https://brew.sh/index_fr).<br />
@@ -90,26 +122,6 @@ Copiez la commande suivante :
 brew install nginx
 ```
 Félicitation votre serveur **Nginx** est maintenant installé et à jour.
-
-### Alias bash profile
-Je ne sais pas pour vous, de mon côté j'aime pouvoir entrer des commandes facile et personnalisées.<br />
-Tout d'abord il faut se rendre dans votre répertoire de travail. J'entends par là votre dossier commençant par **~** appelé tild ou encore la nouille. :stuck_out_tongue:
-
-```
-cd ~/
-```
-
-Ensuite vous allez créer un fichier de profil pour personnaliser votre programme shell. ET entre autre créer des alias ou commandes raccourcis.
-```
-nano .bash_profile
-```
-Et ajoutez ces 2 lignes suivantes puis **ctrl + x** pour quitter et **Y** ou **O** pour enregistrer avant de quitter :
-```
-# Raccourci pour configurer nginx
-alias ..nginx="cd /usr/local/etc/nginx/"
-```
-
-Voici une liste de mes [alias](https://github.com/geekoun/Installation-Nginx-php-fpm-sur-macOS/blob/master/.bash_profile) pour le plus curieux :stuck_out_tongue:
 
 ### Configuration nginx
 Rendez-vous dans :
