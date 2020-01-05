@@ -32,7 +32,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 ```
 
 ### Alias bash profile
-Tout d'abord il faut se rendre dans votre répertoire de travail. J'entends par là votre dossier commençant par **~** appelé tilde ou encore la nouille. :stuck_out_tongue:
+Tout d'abord il faut se rendre dans votre répertoire utilisateur. J'entends par là votre dossier commençant par **~** appelé tilde ou encore la nouille. :stuck_out_tongue:
 
 ```
 cd ~/
@@ -49,7 +49,9 @@ Puis ajoutez ces 2 lignes suivantes puis **ctrl + x** pour quitter et **Y** ou *
 alias ..nginx="cd /usr/local/etc/nginx/"
 ```
 
-Voici une liste de mes [alias](https://github.com/geekoun/Installation-Nginx-php-fpm-sur-macOS/blob/master/.bash_profile) pour le plus curieux :stuck_out_tongue:
+Voici une liste de mes [alias](https://github.com/geekoun/Installation-Nginx-php-fpm-sur-macOS/blob/master/.bash_profile) pour le plus curieux :stuck_out_tongue:<br />
+
+Rassure-vous je ferai un bel effort dans ce tutoriel pour ne pas utiliser mes raccourci afin que vous ne soyez pas trop perdu. :+1:
 
 ## Installation homebrew
 Rendez-vous sur [https://brew.sh/index_fr](https://brew.sh/index_fr).<br />
@@ -136,6 +138,24 @@ Voici la partie la plus délicate. Rien de bien compliqué en revanche aller tro
 J'aime reprendre les bests practice de linux. Et comme par hasard sur macOSx c'est presque pareil...enfin presque...
 
 #### Dossier de travail
+Tout d'abord nous allons créer un répertoire de travail pour le développement. Tout vos sites internet seront dans ce répertoire et facile à trouver.
+
+Vous vous souvenez qu'en début de turoriel, j'ai expliqué que macOSx possède un serveur apache pré-installé... et donc il possède un répertoire pour le développement... très bien caché. Tellement que c'est un dossier caché... donc pas facile à trouver un pour un néophyte.<br />
+Voici ou il se cache :
+```
+cd /usr/local/var/www/
+```
+C'est bien mais pas top ! <br />
+
+> Comment y remédier ?
+
+Nous allons créer un dossier (répertoire) dans votre répertoire utilisateur. (la nouille)
+```
+cd ~/
+mkdir -p Sites
+```
+
+
 #### nginx.conf
 #### Création des dossiers de conf
 #### SSL
