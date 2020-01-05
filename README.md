@@ -28,6 +28,44 @@ Pourquoi WGET... ? Je ne fais que suivre le tutoriel officiel d'installation de 
 
 ## Installation php-fpm
 Maintenant que nous avons installé homebrew, entrons dans le vif du sujet.
+J'ai besoin d'installer une version la plus à jour possible. <br />
+> Normal !! Me diriez-vous.
+
+Ok ! Très bien ! comment trouve-t-on cette version à jour. Si ca se trouve il en existe plusieurs versions plus ou moins récentes. Comment les connaître ?
+
+Avec cette commande, vous trouverez les réponses à vos questions :
+```
+brew --help
+```
+
+Cela affiche quelque chose du genre...
+```
+Example usage:
+  brew search [TEXT|/REGEX/]
+  brew info [FORMULA...]
+  brew install FORMULA...
+  brew update
+  brew upgrade [FORMULA...]
+  brew uninstall FORMULA...
+  brew list [FORMULA...]
+
+Troubleshooting:
+  brew config
+  brew doctor
+  brew install --verbose --debug FORMULA
+
+Contributing:
+  brew create [URL [--no-fetch]]
+  brew edit [FORMULA...]
+
+Further help:
+  brew commands
+  brew help [COMMAND]
+  man brew
+  https://docs.brew.sh
+```
+
+Et voilà que nous trouvons la command search qui est très utile. Hop testons là !
 ```
 brew search php
 ```
@@ -37,10 +75,6 @@ Vous verrez une liste de ce genre :
 brew-php-switcher          php-cs-fixer               phplint                phpstan
 php                        php@7.2                    phpmd                  phpunit
 php-code-sniffer           php@7.3                    phpmyadmin
-```
-Pour le plus curieux de nature... aller voir cette commande :
-```
-brew --help
 ```
 Nous pouvons voir que la version la plus récente est la version **php@7.3**. Il nous reste plus qu'à l'installer.<br />
 Conseils : Même si php-fpm n'est pas affiché distinctement la version de php@7.3 est bien une **fpm**.
