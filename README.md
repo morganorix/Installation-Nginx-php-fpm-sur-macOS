@@ -131,7 +131,6 @@ Félicitation votre serveur **Nginx** est maintenant installé et à jour.
 ### Configuration nginx
 Voici la partie la plus délicate. Rien de bien compliqué en revanche aller trop vite peut créer des problèmes. Donc soyez encore plus sérieux dans cette partie.
 
-<br /><br />
 > Vous avez la pression hein ! :scream: :sob:
 <br /><br />
 
