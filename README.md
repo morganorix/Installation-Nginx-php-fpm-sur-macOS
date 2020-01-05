@@ -155,7 +155,7 @@ cd ~/
 mkdir -p Sites
 ```
 
-Voici un aperçu de ce que vous devez avoir avec **Finder**
+Voici un aperçu de ce que vous devez avoir avec **Finder**.
 
 ![Aperçu Finder](/images/apercu-finder-site.png)
 
@@ -168,7 +168,7 @@ Ajoutez cette ligne suivante puis **ctrl + x** pour quitter et **Y** ou **O** po
 ```
 <?php phpinfo(); ?>
 ```
-Félicitation votre nouveau dossier est près.
+Félicitation votre nouveau répertoire de travail est près.
 
 #### nginx.conf
 
