@@ -157,7 +157,7 @@ mkdir -p Sites
 
 Voici un aperçu de ce que vous devez avoir avec **Finder**
 
-![Aperçu Finder](/images/apercu-finder.png)
+![Aperçu Finder](/images/apercu-finder-site.png)
 
 #### nginx.conf
 #### Création des dossiers de conf
