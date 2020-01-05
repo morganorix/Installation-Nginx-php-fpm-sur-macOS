@@ -2,7 +2,7 @@
 
 ## Sommaire
 * [Introduction](#introduction)
-* [Préparation](#preparation)
+* [Préparation](#préparation)
   * [Oh my zsh](#oh-my-zsh)
   * [Alias bash profile](#alias-bash-profile)
 * [Installation homebrew](#installation-homebrew)
