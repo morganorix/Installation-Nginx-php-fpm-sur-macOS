@@ -1,4 +1,4 @@
-# Installation-Nginx-php-fpm-sur-macOS
+# Installation de Nginx, de php-fpm et Sql sur macOSx
 
 ## Sommaire
 * [Introduction](#introduction)
