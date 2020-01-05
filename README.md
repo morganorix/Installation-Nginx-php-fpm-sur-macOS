@@ -23,7 +23,7 @@ Ou pour les fénéants ouvrez votre terminal et coller cette commande :
 brew install wget
 ```
 Pourquoi WGET... ? Je ne fais que suivre le tutoriel officiel d'installation de homebrew. :relaxed: <br />
-**A savoir :** Si vous êtes plus à l'aise avec le terminal, les installations de Nginx ou Php se retrouverons par défault dans le répertoire : `/usr/local/` :kissing_heart:
+**A savoir :** Si vous êtes plus à l'aise avec le terminal, les installations de Nginx ou Php se retrouverons par défault dans le répertoire : `/usr/local/etc/` :kissing_heart:
 
 ## Installation php-fpm
 Maintenant que nous avons installé homebrew, entrons dans le vif du sujet.
@@ -108,6 +108,8 @@ Et ajoutez ces 2 lignes suivantes puis **ctrl + x** pour quitter et **Y** ou **O
 # Raccourci pour configurer nginx
 alias ..nginx="cd /usr/local/etc/nginx/"
 ```
+
+Voici une liste de mes [alias](https://github.com/geekoun/Installation-Nginx-php-fpm-sur-macOS/blob/master/.bash_profile) pour le plus curieux :stuck_out_tongue:
 
 ### Configuration nginx
 Rendez-vous dans :
