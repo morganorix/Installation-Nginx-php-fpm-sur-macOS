@@ -105,8 +105,9 @@ nano .bash_profile
 ```
 Et ajoutez ces 2 lignes suivantes :
 ```
-# Raccourci pour configurer nginx
-alias ..nginx="cd /usr/local/etc/nginx/"
+1.  # Raccourci pour configurer nginx
+2. alias ..nginx="cd /usr/local/etc/nginx/"
+3. 
 
 
 
