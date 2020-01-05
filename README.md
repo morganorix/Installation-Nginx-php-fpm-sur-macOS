@@ -14,6 +14,7 @@ Rendez-vous sur [https://brew.sh/index_fr](https://brew.sh/index_fr).<br />
 Ou pour les fénéants ouvrez votre terminal et coller cette commande :
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 brew install wget
 ```
 Pourquoi WGET... ? Je ne fais que suivre le tutoriel officiel d'installation de homebrew. :relaxed:
