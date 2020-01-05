@@ -69,7 +69,7 @@ Et voilà que nous trouvons la command search qui est très utile. Hop testons l
 ```
 brew search php
 ```
-Vous verrez une liste de ce genre :
+Vous y verrez afficher en résultat une liste de ce type :
 ```
 ==> Formulae
 brew-php-switcher          php-cs-fixer               phplint                phpstan
