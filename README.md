@@ -128,7 +128,7 @@ Copiez la commande suivante :
 ```
 brew install nginx
 ```
-Félicitation votre serveur **Nginx** est maintenant installé et à jour.
+Félicitation votre serveur **Nginx** est maintenant installé et à jour. :relaxed:
 
 ### Configuration nginx
 Voici la partie la plus délicate. Rien de bien compliqué en revanche aller trop vite peut créer des problèmes. Donc soyez encore plus sérieux dans cette partie.
@@ -168,7 +168,7 @@ Voici un aperçu de ce que vous devez avoir avec **Finder**.
 
 ![Aperçu Finder](/images/apercu-finder-site.png)
 
-Félicitation votre nouveau répertoire de travail est près.
+Félicitation votre nouveau répertoire de travail est près. :relaxed:
 
 #### nginx.conf
 
