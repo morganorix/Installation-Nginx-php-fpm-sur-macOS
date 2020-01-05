@@ -12,7 +12,10 @@
 ## Installation homebrew
 Rendez-vous sur [https://brew.sh/index_fr](https://brew.sh/index_fr).
 Ou pour les fénéants ouvrez votre terminal et coller cette commande :
-`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+```
+**geekoun@MacBook-Pro-de-geekoun  ~**  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+```
 
 ## Installation php-fpm
 
