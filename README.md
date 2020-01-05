@@ -12,8 +12,8 @@
   * [Aliases bash profile](#aliases-bash-profile)
 
 ## Introduction
-Par défaut macOsx à un serveur non actif Apache pré-installé ainsi qu'un serveur php (il n'y a pas de serveur sql de pré-installé). Si vous êtes comme moi, je préfère de loin un serveur Nginx. De plus les versions sont pas forcément à jour sur votre mac. Autant de raisons qui font que ne nous voulons pas les activer.<br />
-Grâce à **Homebrew** nous pouvons installer un serveur **Nginx**, serveur **php-fpm** et serveur **sql** à jour et facile à maintenir.
+Par défaut macOSx à un serveur non actif Apache pré-installé ainsi qu'un serveur php (il n'y a pas de serveur sql de pré-installé). Si vous êtes comme moi, je préfère de loin un serveur Nginx. De plus les versions sont pas forcément à jour sur votre mac. Autant de raisons qui font que ne nous voulons pas les activer.<br />
+Grâce à **Homebrew** nous pouvons installer un serveur **Nginx**, serveur **Php-fpm** et serveur **Sql** à jour et facile à maintenir.
 
 ## Installation homebrew
 Rendez-vous sur [https://brew.sh/index_fr](https://brew.sh/index_fr).<br />
@@ -23,7 +23,8 @@ Ou pour les fénéants ouvrez votre terminal et coller cette commande :
 
 brew install wget
 ```
-Pourquoi WGET... ? Je ne fais que suivre le tutoriel officiel d'installation de homebrew. :relaxed:
+Pourquoi WGET... ? Je ne fais que suivre le tutoriel officiel d'installation de homebrew. :relaxed: <br />
+**A savoir :** Si vous êtes plus à l'aise avec le terminal, les installations de Nginx ou Php se retrouverons par défault dans le répertoire : `/usr/local/` :kissing_heart:
 
 ## Installation php-fpm
 Maintenant que nous avons installé homebrew, entrons dans le vif du sujet.
@@ -43,15 +44,18 @@ Conseils : Même si php-fpm n'est pas affiché distinctement la version de php@7
 brew install php@7.3
 ```
 
-Félicitation votre php est maintenant installé et à jour. :relaxed:
+Félicitation votre serveur **Php** est maintenant installé et à jour. :relaxed:
 
 ## Installation nginx
-Attaquons-nous à nginx. Copiez commande suivante :
+Attaquons-nous à nginx. Pas besoin de faire de recherche car il n'y a qu'une seule version maintenue à jour.<br />
+Copiez commande suivante :
 ```
 brew install nginx
 ```
+Félicitation votre serveur **Nginx** est maintenant installé et à jour.
 
 ### Configuration nginx
+
 
 ## Configuration fichier hosts
 
