@@ -20,6 +20,7 @@ Grâce à **Homebrew** nous pouvons installer un serveur **Nginx**, serveur **Ph
 Je ne sais pas pour vous, de mon côté j'aime travailler dans un minimum de confort et pouvoir entrer des commandes facile et personnalisées avec un terminal un peu custom.<br />
 
 ### Oh my zsh
+Oh-my-zsh est un plugin pour votre terminal qui va vour permettre de mettre un peu de couleurs et de formes dans votre temrinal. ouff
 Customisation du terminal sur ce lien : [https://ohmyz.sh/](https://ohmyz.sh/)<br />
 Ou pour le plus fénéants :
 ```
