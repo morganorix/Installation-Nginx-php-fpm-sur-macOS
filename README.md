@@ -181,6 +181,17 @@ Insérez les lignes du fichiers [nginx.conf](nginx.conf) ou copiez le fichier di
 
 
 #### Création des dossiers de conf
+Si vous avez été attentif la dernière ligne du fichier nginx.conf est un include et il inclus dans un répertoire qui n'existe pas. Nous allons tous créer maintenant. :punch:
+
+```
+cd /usr/local/etc/nginx/
+rm -r servers/
+mkdir -p sites-{enabled,available}
+cd sites-available
+nano default.conf
+```
+Insérez les lignes du fichiers [default.conf](sites-availabledefault.conf) ou copiez le fichier directement dans le répertoire, c'est comme vous le souhaitez.
+
 #### SSL
 
 Rendez-vous dans :
