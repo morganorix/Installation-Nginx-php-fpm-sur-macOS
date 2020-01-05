@@ -4,9 +4,9 @@
 1. **Installation homebrew**
 2. **Installation php-fpm**
 3. **Installation nginx**
-  * **Configuration de nginx**
+  1. **Configuration de nginx**
 4. **configuration du fichier hosts**
-5. Bonus
-  * Aliases bash profile
+5. **Bonus**
+  1. **Aliases bash profile**
 
 ## Installation homebrew
