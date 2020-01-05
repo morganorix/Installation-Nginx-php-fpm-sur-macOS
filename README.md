@@ -155,10 +155,6 @@ cd ~/
 mkdir -p Sites
 ```
 
-Voici un aperçu de ce que vous devez avoir avec **Finder**.
-
-![Aperçu Finder](/images/apercu-finder-site.png)
-
 Puis créer un fichier php dans ce dossier :
 ```
 cd Sites/
@@ -168,6 +164,10 @@ Ajoutez cette ligne suivante puis **ctrl + x** pour quitter et **Y** ou **O** po
 ```
 <?php phpinfo(); ?>
 ```
+Voici un aperçu de ce que vous devez avoir avec **Finder**.
+
+![Aperçu Finder](/images/apercu-finder-site.png)
+
 Félicitation votre nouveau répertoire de travail est près.
 
 #### nginx.conf
