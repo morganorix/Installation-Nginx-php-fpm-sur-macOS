@@ -132,7 +132,6 @@ Félicitation votre serveur **Nginx** est maintenant installé et à jour.
 Voici la partie la plus délicate. Rien de bien compliqué en revanche aller trop vite peut créer des problèmes. Donc soyez encore plus sérieux dans cette partie.
 
 > Vous avez la pression hein ! :scream: :sob:
-<br /><br />
 
 J'aime reprendre les bests practice de linux. Et comme par hasard sur macOSx c'est presque pareil...enfin presque...
 
