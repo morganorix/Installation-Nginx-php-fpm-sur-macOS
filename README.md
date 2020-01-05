@@ -38,12 +38,10 @@ brew-php-switcher          php-cs-fixer               phplint                php
 php                        php@7.2                    phpmd                  phpunit
 php-code-sniffer           php@7.3                    phpmyadmin
 ```
-<br />
 Pour le plus curieux de nature... aller voir cette commande :
 ```
 brew --help
 ```
-<br />
 Nous pouvons voir que la version la plus récente est la version **php@7.3**. Il nous reste plus qu'à l'installer.<br />
 Conseils : Même si php-fpm n'est pas affiché distinctement la version de php@7.3 est bien une **fpm**.
 ```
