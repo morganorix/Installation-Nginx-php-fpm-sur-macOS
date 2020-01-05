@@ -104,11 +104,14 @@ Ensuite vous allez créer un fichier de profil pour personnaliser votre programm
 nano .bash_profile
 ```
 ```
- GNU nano 4.7  
+GNU nano 4.7  
 
- 
+
+
 # Raccourci pour configurer nginx
 alias ..nginx="cd /usr/local/etc/nginx/"
+
+
 
 ^G Aide        ^O Écrire      ^W Chercher    ^K Couper      ^J Justifier   ^C Pos. cur.   M-U Annuler
 ^X Quitter     ^R Lire fich.  ^\ Remplacer   ^U Coller      ^T Orthograp.  ^_ Aller ligne M-E Refaire
