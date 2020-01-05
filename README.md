@@ -179,6 +179,27 @@ nano nginx.conf
 ```
 Insérez les lignes du fichiers [nginx.conf](nginx.conf) ou copiez le fichier directement dans le répertoire, c'est comme vous le souhaitez.
 
+```
+user                    <user> staff;
+worker_processes        1;
+
+error_log               /usr/local/etc/nginx/logs/error.log;
+# error_log             /usr/local/etc/nginx/logs/error.log  notice;
+# error_log             /usr/local/etc/nginx/logs/error.log  info;
+
+events {
+    worker_connections  1024;
+}
+
+http {
+    include             mime.types;
+    default_type        application/octet-stream;
+    sendfile            on;
+    keepalive_timeout   65;
+    gzip                on;
+    include             sites-enabled/*.conf;
+}
+```
 
 #### Création des dossiers de conf
 Si vous avez été attentif la dernière ligne du fichier nginx.conf est un include et il inclus dans un répertoire qui n'existe pas. Nous allons tous créer maintenant. :punch:
@@ -191,6 +212,25 @@ cd sites-available
 nano default.conf
 ```
 Insérez les lignes du fichiers [default.conf](sites-available/default.conf) ou copiez le fichier directement dans le répertoire, c'est comme vous le souhaitez.
+
+```
+server {
+    listen       80;
+    server_name  localhost;
+    root         /Users/<user>/Sites/;
+    index        index.php index.html index.htm;
+
+    location ~ \.php {
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+        fastcgi_pass 127.0.0.1:9000;
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_buffers 16 16k;
+        fastcgi_buffer_size 32k;
+    }
+}
+
+```
 
 #### SSL
 
