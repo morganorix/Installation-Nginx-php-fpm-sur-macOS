@@ -26,6 +26,7 @@ brew search php
 ```
 Vous verrez une liste de ce genre :
 ```
+==> Formulae
 brew-php-switcher          php-cs-fixer               phplint                phpstan
 php                        php@7.2                    phpmd                  phpunit
 php-code-sniffer           php@7.3                    phpmyadmin
