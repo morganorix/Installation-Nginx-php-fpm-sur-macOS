@@ -168,9 +168,17 @@ Voici un aperçu de ce que vous devez avoir avec **Finder**.
 
 ![Aperçu Finder](/images/apercu-finder-site.png)
 
-Félicitation votre nouveau répertoire de travail est près. :relaxed:
+Félicitation votre nouveau répertoire de déveleppement est près. :relaxed:
 
 #### nginx.conf
+Maintenant que nous avons configuré notre nouveau répertoire de développement, continuons à configurer Nginx. Nous allons dupliquer le fichier nginx.conf pour en faire une sauvergarde.
+```
+cd /usr/local/etc/nginx/
+mv nginx.conf nginx.conf.bak
+nano nginx.conf
+```
+Insérez les lignes du fichiers [nginx.conf](nginx.conf) ou copiez le fichier directement dans le répertoire, c'est comme vous le souhaitez.
+
 
 #### Création des dossiers de conf
 #### SSL
