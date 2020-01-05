@@ -159,7 +159,19 @@ Voici un aperçu de ce que vous devez avoir avec **Finder**
 
 ![Aperçu Finder](/images/apercu-finder-site.png)
 
+Puis créer un fichier php dans ce dossier :
+```
+cd Sites/
+nano index.php
+```
+Ajoutez cette ligne suivante puis **ctrl + x** pour quitter et **Y** ou **O** pour enregistrer avant de quitter :
+```
+<?php phpinfo(); ?>
+```
+Félicitation votre nouveau dossier est près.
+
 #### nginx.conf
+
 #### Création des dossiers de conf
 #### SSL
 
