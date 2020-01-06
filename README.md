@@ -21,7 +21,7 @@
   * [SSL](#ssl)
     * [Certificat](#certificat)
     * [Snippets](#snippets)
-    * [Toutouyoutou.conf](#toutouyoutouconf)
+    * [Audrey.ooo.conf](#audreyoooconf)
 
 ## Introduction
 Par défaut macOSx à un serveur non actif Apache pré-installé ainsi qu'un serveur php (il n'y a pas de serveur sql de pré-installé). Si vous êtes comme moi, je préfère de loin un serveur Nginx. De plus les versions sont pas forcément à jour sur votre mac. Autant de raisons qui font que ne nous voulons pas les activer.<br />
@@ -454,7 +454,7 @@ ssl_dhparam /usr/local/etc/nginx/ssl/dhparam.www.audrey.ooo.pem;
 ```
 Vou êtes maintenant prêt à passer à la suite. :+1:
 
-#### www.audrey.ooo.conf
+#### Audrey.ooo.conf
 Enfin notre dernière étape. Je suis déjà trsite à l'idée de vous quittez. Mais que voulez-vous les bonnes chose ont une fin :disappointed_relieved: :relaxed:<br />
 
 Allons modifier notre fichier **www.audrey.ooo.conf** ou copiez le fichier directement dans le répertoire comme vous le souhaitez.
