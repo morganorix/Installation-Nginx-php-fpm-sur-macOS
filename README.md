@@ -340,22 +340,23 @@ Je vais donc  vous proposez de configurer des noms de domaines supplémentaires 
 
 ### Configuration nginx avec nom de domaine
 Vous vous souvenez du fameux dossier **sites-available/** ? Sinon je vous invite à retrouver ce cours plus [haut](#création-des-dossiers-de-conf).
-Donc rendez-vous dans le dossier **sites-available/**. Nous allons dupliquer le fichier **default.conf** et le modifier.<br />
+Donc rendez-vous dans le dossier **sites-available/**. Nous allons dupliquer le fichier **default.conf**, le modifier et créer un lien vers le dossier **sites-enabled/**.<br />
 
 Et comme vous êtes des fous pour être arrivé si loin :metal:. Je vais utiliser mes [alias](https://github.com/geekoun/Installation-Nginx-php-fpm-sur-macOS/blob/master/.bash_profile) :fire:
 
 ```
 ..nginx
 cd sites-available/
-cp default.conf toutouyoutou.conf
-nano toutouyoutou.conf
+cp default.conf www.audrey.ooo
+ln -s www.audrey.ooo ../sites-enabled/
+nano www.audrey.ooo
 ```
 Voici à quoi doit ressembler après modification le fichier.
 ```
 server {
     listen       80;
     server_name  toutouyoutou.fr;
-    root         /Users/<user>/Sites/www.toutouyoutou.fr/;
+    root         /Users/<user>/Sites/www.audrey.ooo/;
     index        index.php index.html index.htm;
 
     location ~ \.php {
@@ -376,8 +377,8 @@ Ahh oui pas faux ! Nous allons procéder comme suit :
 ```
 ..~
 cd Sites/
-mkdir -p www.toutouyoutou.fr
-cp index.php www.toutouyoutou.fr/
+mkdir -p www.audrey.ooo
+cp index.php www.audrey.ooo/
 ```
 
 Il ne reste plus qu'a recharger le **Nginx** :
@@ -386,7 +387,7 @@ brew services restart nginx
 ```
 
 ### Configuration fichier hosts
-Bon ben il reste encore à modifier notre fichier **hosts** pour faire pointer notre nom de domain (toutouyoutou.fr) vers notre macOSx.
+Bon ben il reste encore à modifier notre fichier **hosts** pour faire pointer notre nom de domain (www.audrey.ooo) vers notre macOSx.
 
 > Mais What !!!
 
@@ -406,7 +407,7 @@ Voici ce que le nano affiche après ajout de la ligne magique :
 255.255.255.255 broadcasthost
 ::1             localhost
 
-127.0.0.1 toutouyoutou.fr
+127.0.0.1 audrey.ooo
 ```
 
 ### SSL
@@ -422,35 +423,66 @@ mkdir -p {snippets,ssl}
 
 #### Certificat
 ```
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ssl/nginx-selfsigned-toutouyoutou.fr.key -out ssl/nginx-selfsigned-toutouyoutou.fr.crt
-openssl dhparam -out ssl/dhparam-toutouyoutou.fr.pem 2048
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ssl/nginx-selfsigned.www.audrey.ooo.key -out ssl/nginx-selfsigned.www.audrey.ooo.crt
+openssl dhparam -out ssl/dhparam.www.audrey.ooo.pem 2048
 ```
 
 #### Snippets
 Nous allons ensuite créer nos snippets et les intégrer en dernière partie dans **toutouyoutou.conf**
 ```
 cd snippets/
-nano /etc/nginx/snippets/self-signed-toutouyoutou.fr.conf
+nano /etc/nginx/snippets/self-signed.www.audrey.ooo.conf
 ```
 
-Ajoutez ceci ou copiez le [fichier](snippets/self-signed-toutouyoutou.fr.conf) c'est comme vous le souhaitez :
+Ajoutez ceci ou copiez le [fichier](snippets/self-signed.www.audrey.ooo.conf) c'est comme vous le souhaitez :
 ```
-ssl_certificate /usr/local/etc/nginx/ssl/nginx-selfsigned-toutouyoutou.fr.crt;
-ssl_certificate_key /usr/local/etc/nginx/ssl/nginx-selfsigned-toutouyoutou.fr.key;
+ssl_certificate /usr/local/etc/nginx/ssl/nginx-selfsigned.www.audrey.ooo.crt;
+ssl_certificate_key /usr/local/etc/nginx/ssl/nginx-selfsigned.www.audrey.ooo.key;
 ```
 Nous allons créer le snippet pour le fichier **pem** :
 ```
 nano /etc/nginx/snippets/ssl-params-toutouyoutou.fr.conf
 ```
-ET ajoutez ceci ou copiez le [fichier](snippets/ssl-params-toutouyoutou.fr.conf) c'est comme vous le souhaitez :
+ET ajoutez ceci ou copiez le [fichier](snippets/ssl-params.www.audrey.ooo.conf) c'est comme vous le souhaitez :
 ```
 ssl_session_cache    shared:SSL:1m;
 ssl_session_timeout  5m;
 
 ssl_ciphers  HIGH:!aNULL:!MD5;
 ssl_prefer_server_ciphers  on;
-ssl_dhparam /usr/local/etc/nginx/ssl/dhparam-toutouyoutou.fr.pem;
+ssl_dhparam /usr/local/etc/nginx/ssl/dhparam.www.audrey.ooo.pem;
 ```
 Vou êtes maintenant prêt à passer à la suite. :+1:
 
-#### Toutouyoutou.conf
+#### www.audrey.ooo.conf
+Enfin notre dernière étape. Je suis déjà trsite à l'idée de vous quittez. Mais que voulez-vous les bonnes chose ont une fin :disappointed_relieved: :relaxed:<br />
+
+Allons modifier notre fichier **www.audrey.ooo.conf** ou copiez le fichier directement dans le répertoire comme vous le souhaitez.
+En prime nous allons également forcer la redirection du port 80 (http) vers le 443 (https) :
+```
+server {
+    listen 80;
+    server_name audrey.ooo;
+    return 301 https://$server_name$request_uri;
+}
+
+server {
+    listen       443 ssl http2;
+    server_name  audrey.ooo;
+    root         /Users/<user>/Sites/www.audrey.ooo/;
+    index        index.php index.html index.htm;
+
+    include /usr/local/etc/nginx/snippets/self-signed.www.audrey.ooo.conf;
+    include /usr/local/etc/nginx/snippets/ssl-params.www.audrey.ooo.conf;
+
+    location ~ \.php {
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+        fastcgi_pass 127.0.0.1:9000;
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_buffers 16 16k;
+        fastcgi_buffer_size 32k;
+    }
+}
+```
+Vous pouvez relancer le fichier
