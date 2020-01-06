@@ -19,6 +19,9 @@
   * [Configuration nginx avec nom de domaine](#configuration-nginx-avec-nom-de-domaine)
   * [Configuration fichier hosts](#configuration-fichier-hosts)
   * [SSL](#ssl)
+    * [Certificat](#certificat)
+    * [Snippets](#snippets)
+    * [Toutouyoutou.conf](#toutouyoutouconf)
 
 ## Introduction
 Par défaut macOSx à un serveur non actif Apache pré-installé ainsi qu'un serveur php (il n'y a pas de serveur sql de pré-installé). Si vous êtes comme moi, je préfère de loin un serveur Nginx. De plus les versions sont pas forcément à jour sur votre mac. Autant de raisons qui font que ne nous voulons pas les activer.<br />
@@ -332,10 +335,122 @@ Ouvrez-le ensuite et configurer-le comme ceci :
 Félicitation !! Vous venez de faire une installation rapide et simple d'un interpreteur pour lire vos bases de données en 2 temps 3 mouvements. :relaxed:
 
 ## Aller plus loin
-### Configuration nginx avec nom de domaine
-### Configuration fichier hosts
-### SSL
+Ok ! Je sent qu'il y a des motivés. :stuck_out_tongue_winking_eye:<br />
+Je vais donc  vous proposez de configurer des noms de domaines supplémentaires ainsi que de les faire pointer dans le dossier que vous désirez. Et en tout dernier on fera une configuration pour mettre en https. Car si ces messieurs codeurs font développement e-shop par exemple il leur faudra un certificat pour faire des testes. :stuck_out_tongue_winking_eye:
 
-Rendez-vous dans :
+### Configuration nginx avec nom de domaine
+Vous vous souvenez du fameux dossier **sites-available/** ? Sinon je vous invite à retrouver ce cours plus [haut](#création-des-dossiers-de-conf).
+donc rendez-vous dans le dossier **sites-available/**. Nous allons dupliquer le fichier **défault.conf** et le modifier.<br />
+
+Et comme vous êtes des fous pour être arrivé si loin :metal:. Je vais utiliser mes [alias](https://github.com/geekoun/Installation-Nginx-php-fpm-sur-macOS/blob/master/.bash_profile) :fire:
+
 ```
+..nginx
+cd sites-available/
+cp default.conf toutouyoutou.conf
+nano toutouyoutou.conf
 ```
+Voici à quoi devrait ressembler après modification le fichier.
+```
+server {
+    listen       80;
+    server_name  toutouyoutou.fr;
+    root         /Users/<user>/Sites/www.toutouyoutou.fr/;
+    index        index.php index.html index.htm;
+
+    location ~ \.php {
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+        fastcgi_pass 127.0.0.1:9000;
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_buffers 16 16k;
+        fastcgi_buffer_size 32k;
+    }
+}
+```
+**Bon à savoir** : N'oubliez pas de modifier le <user>... je dis ça... je dis rien... :metal: :fire: :sunglasses:<br /><br />
+
+> Vas y quoi ! T'as oublié de créer le dossier dans Sites/ !!
+
+Ahh oui pas faux ! Nous allons procéder comme suit :
+```
+..~
+cd Sites/
+mkdir -p www.toutouyoutou.fr
+cp index.php www.toutouyoutou.fr/
+```
+
+Il ne reste plus qu'a recharger le **Nginx** :
+```
+brew services restart nginx
+```
+
+### Configuration fichier hosts
+Bon ben il reste encore à modifier notre fichier hosts pour faire pointer notre nom de domain (toutouyoutou.fr) vers notre macOSx.
+
+> Mais What !!!
+
+Ben oui par défaut https://localhost pointe automatiquement. Et nous allons devoir aider un peut pour que ca pointe correctement sur notre nouveau nom de doamine.<br /> Comme ceci :
+```
+host
+```
+Voici ce que le nano affiche :
+```
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1       localhost
+255.255.255.255 broadcasthost
+::1             localhost
+
+127.0.0.1 toutouyoutou.fr
+```
+
+### SSL
+Aller hop dernière petite étape et non des moindres...
+
+> Pfff ils sont fous ces romains !
+
+Pour ce faire nous allons créer 2 dossiers supplémentaire dans nginx. Un qui sera un snippet l'autre pour générer le certificat ssl auto-signé. hop hop !!
+```
+..nginx
+mkdir -p {snippets,ssl}
+```
+
+#### Certificat
+```
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ssl/nginx-selfsigned.toutouyoutou.fr.key -out ssl/nginx-selfsigned.toutouyoutou.fr.crt
+openssl dhparam -out ssl/dhparam.toutouyoutou.fr.pem 2048
+```
+
+#### Snippets
+Nous allons ensuite créer nos snippets et les intégrer en dernière partie dans **toutouyoutou.conf**
+```
+cd snippets/
+nano /etc/nginx/snippets/self-signed.toutouyoutou.fr.conf
+```
+
+Ajoutez ceci ou copiez le [fichier](snippets/self-signed-toutouyoutou.fr.conf) c'est comme vous le souhaitez :
+```
+ssl_certificate /usr/local/etc/nginx/ssl/nginx-selfsigned.toutouyoutou.fr.crt;
+ssl_certificate_key /usr/local/etc/nginx/ssl/nginx-selfsigned.toutouyoutou.fr.key;
+```
+Nous allons créer le snippet pour le fichier **pem** :
+```
+nano /etc/nginx/snippets/ssl-params.toutouyoutou.fr.conf
+```
+ET ajoutez ceci ou copiez le [fichier](snippets/ssl-params-toutouyoutou.fr.conf) c'est comme vous le souhaitez :
+```
+ssl_session_cache    shared:SSL:1m;
+ssl_session_timeout  5m;
+
+ssl_ciphers  HIGH:!aNULL:!MD5;
+ssl_prefer_server_ciphers  on;
+ssl_dhparam /usr/local/etc/nginx/ssl/dhparam.toutouyoutou.fr.pem;
+```
+Vou êtes maintenant prêt à passer à la suite. :+1:
+
+#### Toutouyoutou.conf

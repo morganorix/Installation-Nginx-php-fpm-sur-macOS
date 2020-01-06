@@ -13,6 +13,9 @@ alias ....="cd ../../.."
 alias ..Sites="cd ~/Sites/"
 alias ..nginx="cd /usr/local/etc/nginx/"
 
+#modification du fichier hosts
+alias hosts="nano /etc/hosts"
+
 # lister les repertoire avec des couleurs
 alias ls="ls -G"
 
