@@ -10,7 +10,7 @@
 * [Installation nginx](#installation-nginx)
   * [Configuration nginx](#configuration-nginx)
     * [Dossier de travail](#dossier-de-travail)
-    * [nginx.conf](#nginx.conf)
+    * [Nginx.conf](#nginx.conf)
     * [Création des dossiers de conf](#création-des-dossiers-de-conf)
 * [Installation serveur Mysql](#installation-serveur-mysql)
 * [Sequel Pro](#sequel-pro)
@@ -174,7 +174,7 @@ Voici un aperçu de ce que vous devez avoir avec **Finder**.
 
 Félicitation votre nouveau répertoire de déveleppement est près. :relaxed:
 
-#### nginx.conf
+#### Nginx.conf
 Maintenant que nous avons configuré notre nouveau répertoire de développement, continuons à configurer Nginx. Nous allons dupliquer le fichier nginx.conf pour en faire une sauvergarde.
 ```
 cd /usr/local/etc/nginx/
