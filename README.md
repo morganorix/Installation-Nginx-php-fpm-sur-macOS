@@ -14,7 +14,7 @@
     * [Création des dossiers de conf](#création-des-dossiers-de-conf)
 * [Installation serveur sql](#installation-serveur-sql)
 * [Aller plus loin](#aller-plus-loin)
-  * [Configuration nginx avec nom de domaine](configuration-nginx-avec-nom-de-domaine)
+  * [Configuration nginx avec nom de domaine](#configuration-nginx-avec-nom-de-domaine)
   * [Configuration fichier hosts](#configuration-fichier-hosts)
   * [SSL](#ssl)
 
