@@ -497,3 +497,7 @@ ETTTTT tadammm :
 Cliquez sur : **Continuer vers le site audrey.ooo (dangereux)**. Comme le certificat n'est pas valide le navigateur affichera un message d'alerte. Vous pouvez enregistrer le certificat sur votre mac et le valider pour éviter d'autre soucis. :relaxed:
 
 ![https://audrey.ooo](/images/apercu-audrey.ooo.png)
+
+**Bon à savoir** : Pensez à vider le cache de votre navigateur avant. Et si ca ne fonctionne pas redémarrez votre mac. Parfois il en a besoin !
+
+Thx !
