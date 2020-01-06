@@ -267,7 +267,7 @@ brew services restart nginx
 ```
 Vour pouvez dès à présent lancer votre navigateur préféré safari, Chrome, Firefox, etc. et écrire dans votre barre d'adresse **[http://localhost](http://localhost)** :relaxed:
 
-![Aperçu localhost](/images/localhost.png)
+![Aperçu localhost](/images/apercu-localhost.png)
 
 **Bon à savoir** : Pensez à vider le cache de votre navigateur avant. Et si ca ne fonctionne pas redémarrez votre mac. Parfois il en a besoin !
 
