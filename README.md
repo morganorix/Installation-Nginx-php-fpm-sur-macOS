@@ -28,7 +28,7 @@ Grâce à **Homebrew** nous pouvons installer un serveur **Nginx**, serveur **Ph
 Je ne sais pas pour vous, de mon côté j'aime travailler dans un minimum de confort et pouvoir entrer des commandes facile et personnalisées avec un terminal un peu custom.<br />
 
 ### Oh my zsh
-Oh-my-zsh est un plugin pour votre terminal qui va vour permettre de mettre un peu de couleurs et de formes dans votre temrinal. ouff
+Oh-my-zsh est un plugin pour votre terminal qui va vour permettre de mettre un peu de couleurs et de formes dans votre terminal. ouff<br />
 Customisation du terminal sur ce lien : [https://ohmyz.sh/](https://ohmyz.sh/)<br />
 Ou pour le plus fénéants :
 ```
@@ -55,7 +55,7 @@ alias ..nginx="cd /usr/local/etc/nginx/"
 
 Voici une liste de mes [alias](https://github.com/geekoun/Installation-Nginx-php-fpm-sur-macOS/blob/master/.bash_profile) pour les plus curieux :stuck_out_tongue:<br />
 
-Rassure-vous je ferai un bel effort dans ce tutoriel pour ne pas utiliser mes raccourci afin que vous ne soyez pas trop perdu. :+1:
+Rassurez-vous, je ferai un bel effort dans ce tutoriel pour ne pas utiliser mes raccourcis afin que vous ne soyez pas trop perdu. :+1:
 
 ## Installation homebrew
 Rendez-vous sur [https://brew.sh/index_fr](https://brew.sh/index_fr).<br />
@@ -65,15 +65,15 @@ Ou pour les fénéants ouvrez votre terminal et coller cette commande :
 
 brew install wget
 ```
-Pourquoi WGET... ? Je ne fais que suivre le tutoriel officiel d'installation de homebrew. :relaxed: <br />
-**A savoir :** Si vous êtes plus à l'aise avec le terminal, les installations de Nginx ou Php se retrouverons par défault dans le répertoire : `/usr/local/etc/` :kissing_heart:
+Pourquoi WGET... ? Je ne fais que suivre le tutoriel officiel d'installation de homebrew. :relaxed: <br /><br />
+**Bon à savoir** : Si vous êtes plus à l'aise avec le terminal, les installations de Nginx ou Php se retrouverons par défault dans le répertoire : `/usr/local/etc/` :kissing_heart:
 
 ## Installation php-fpm
 Maintenant que nous avons installé homebrew, entrons dans le vif du sujet.
 J'ai besoin d'installer une version la plus à jour possible. <br />
 > Normal !! Me diriez-vous.
 
-Ok ! Très bien ! comment trouve-t-on cette version à jour. Si ca se trouve il en existe plusieurs versions plus ou moins récentes. Comment les connaître ?
+Ok ! Très bien ! comment trouve-t-on cette version à jour. Si ca se trouve, il en existe plusieurs versions plus ou moins récentes. Comment les connaître ?
 
 Avec cette commande, vous trouverez les réponses à vos questions :
 ```
@@ -107,7 +107,7 @@ Further help:
   https://docs.brew.sh
 ```
 
-Et voilà que nous trouvons la command search qui est très utile. Hop testons là !
+Et voilà que nous trouvons la commande **search** qui est très utile. Hop !! Testons là.
 ```
 brew search php
 ```
@@ -139,12 +139,12 @@ Voici la partie la plus délicate. Rien de bien compliqué en revanche aller tro
 
 > Vous avez la pression hein ! :scream: :sob:
 
-J'aime reprendre les bests practice de linux. Et comme par hasard sur macOSx c'est presque pareil...enfin presque...
+J'aime reprendre les bests practices de linux. Et comme par hasard sur macOSx c'est presque pareil...enfin presque...
 
 #### Dossier de travail
 Tout d'abord nous allons créer un répertoire de travail pour le développement. Tout vos sites internets seront dans ce répertoire et facile à trouver.
 
-Vous vous souvenez qu'en début de turoriel, j'ai expliqué que macOSx possède un serveur apache pré-installé... et donc il possède un répertoire pour le développement... très bien caché. Tellement que c'est un dossier caché... donc pas facile à trouver pour un néophyte.<br />
+Vous vous souvenez qu'en début de tutoriel, j'ai expliqué que macOSx possède un serveur apache pré-installé... et donc il possède un répertoire pour le développement... très bien caché. Tellement que c'est un dossier caché... donc pas facile à trouver pour un néophyte.<br />
 Voici ou il se cache :
 ```
 cd /usr/local/var/www/
@@ -153,7 +153,7 @@ C'est bien mais pas top ! <br />
 
 > Comment y remédier ?
 
-Nous allons créer un dossier (répertoire) dans votre répertoire utilisateur. (la nouille)
+Nous allons créer un dossier dans votre répertoire utilisateur. (la nouille)
 ```
 cd ~/
 mkdir -p Sites
@@ -204,6 +204,13 @@ http {
     include             sites-enabled/*.conf;
 }
 ```
+
+**Bon à savoir** : <user> dois être remplacé pour votre nom. Pour savoir ou est votre nom ouvrez votre terminal et observé le début de ligne.<br />
+Juste avant que vous écrivez vos commandes. Par exemple pour moi c'est :
+```
+ geekoun@MacBook-Pro-de-geekoun  ~
+ ```
+ Le nom juste avant le arobase est celui que vous devez insérer. :wink:
 
 #### Création des dossiers de conf
 Je n'aime pas avoir un fichier extrêment long à lire. Je préfère en avoir plusieurs, classés dans des dossiers et reliés entre eux.
