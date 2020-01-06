@@ -281,16 +281,24 @@ Pour ma part j'utilise un serveur **Mysql** et **Sequel Pro** pour y accèder.
 Je le télécharge depuis le site officiel sur ce lien [https://dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/). Prenez la version **.dmg** se sera plus simple.
 Suivez les instructions d'installation. :fist:<br />
 
-**Bon à savoir** : Suivre les instruction sur ce lien [https://dev.mysql.com/doc/mysql-osx-excerpt/5.7/en/preface.html](https://dev.mysql.com/doc/mysql-osx-excerpt/5.7/en/preface.html)<br />
+**Bon à savoir** : Suivre les instructions sur ce lien [https://dev.mysql.com/doc/mysql-osx-excerpt/5.7/en/preface.html](https://dev.mysql.com/doc/mysql-osx-excerpt/5.7/en/preface.html)<br />
 
-Voici ce que vous devrez voir après l'installation.
+Voici ce que vous devez voir après l'installation.
 
 ![Aperçu préférence système](/images/apercu-preference-systeme.png)
 
 ![Mysql](/images/mysql.png)
 
 ### Sequel Pro
+Rendez-vous sur le site officiel et téléchargez-le. [https://sequelpro.com/download](https://sequelpro.com/download).
+Une fois téléchargé, copié le dans **Applications**.
+Ouvrez-le ensuite et configurer-le comme ceci :
 
+![Sequel Pro Configuration](/images/sequel-pro-conf.png)
+
+![Aperçu de la base de donnée](/images/apercu-de-la-bdd.png)
+
+Félicitation !! Vous venez de faire une installation rapide et simple d'un serveur **Mysql** ainsi qu'un interpreteur pour lire vos bases de données en 2 temps 3 mouvements. :relaxed:
 
 ## Aller plus loin
 ### Configuration nginx avec nom de domaine
