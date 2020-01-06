@@ -12,7 +12,9 @@
     * [Dossier de travail](#dossier-de-travail)
     * [nginx.conf](#nginx.conf)
     * [Création des dossiers de conf](#création-des-dossiers-de-conf)
-* [Installation serveur sql](#installation-serveur-sql)
+* [Installation serveur Mysql](#installation-serveur-mysql)
+  * [Installation Mysql](#installation-mysql)
+  * [Sequel Pro](#sequel-pro)
 * [Aller plus loin](#aller-plus-loin)
   * [Configuration nginx avec nom de domaine](#configuration-nginx-avec-nom-de-domaine)
   * [Configuration fichier hosts](#configuration-fichier-hosts)
@@ -271,7 +273,22 @@ Vour pouvez dès à présent lancer votre navigateur préféré safari, Chrome, 
 
 **Bon à savoir** : Pensez à vider le cache de votre navigateur avant. Et si ca ne fonctionne pas redémarrez votre mac. Parfois il en a besoin !
 
-## Installation serveur sql
+## Installation serveur Mysql
+Je ne suis pas pour un phpmyadmin. Ca demande trop de ressources inutiles juste pour avoir accès à une base de donnée.
+Pour ma part j'utilise un serveur **Mysql** et **Sequel Pro** pour y accèder.
+
+### Installation Mysql
+Je le télécharge depuis le site officiel sur ce lien [https://dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/). Prenez la version **.dmg** se sera plus simple.
+Suivez les instructions d'installation. :fist:<br /><br />
+
+**Bon à savoir** : Suivre les instruction sur ce lien [https://dev.mysql.com/doc/mysql-osx-excerpt/5.7/en/preface.html](https://dev.mysql.com/doc/mysql-osx-excerpt/5.7/en/preface.html)<br /><br />
+
+Voici ce que vous devrez voir après l'installation.
+![Aperçu préférence système](/images/apercu-preference-systeme.png)
+![Mysql](/images/mysql.png)
+
+### Sequel Pro
+
 
 ## Aller plus loin
 ### Configuration nginx avec nom de domaine
