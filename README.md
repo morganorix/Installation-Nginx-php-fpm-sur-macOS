@@ -10,7 +10,7 @@
 * [Installation nginx](#installation-nginx)
   * [Configuration nginx](#configuration-nginx)
     * [Dossier de travail](#dossier-de-travail)
-    * [Nginx.conf](#nginx.conf)
+    * [Nginx.conf](#nginx-conf)
     * [Création des dossiers de conf](#création-des-dossiers-de-conf)
 * [Installation serveur Mysql](#installation-serveur-mysql)
 * [Sequel Pro](#sequel-pro)
