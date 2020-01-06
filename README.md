@@ -12,9 +12,10 @@
     * [Dossier de travail](#dossier-de-travail)
     * [nginx.conf](#nginx.conf)
     * [Création des dossiers de conf](#création-des-dossiers-de-conf)
-* [Configuration fichier hosts](#configuration-fichier-hosts)
 * [Installation serveur sql](#installation-serveur-sql)
 * [Aller plus loin](#aller-plus-loin)
+  * [Configuration nginx avec nom de domaine](configuration-nginx-avec-nom-de-domaine)
+  * [Configuration fichier hosts](#configuration-fichier-hosts)
   * [SSL](#ssl)
 
 ## Introduction
@@ -246,7 +247,9 @@ server {
 }
 
 ```
-Enfin nous allons créer le lien dans le dossier **sites-enabled** :
+Vous voyez la ligne ou il y a écrit **root** ? Eh ben cette ligne sert à désigner le nouveau répertoire de travail que nous avons créer au tout début du tutoriel.<br /><br />
+
+Nous allons enfin créer le lien dans le dossier **sites-enabled** :
 ```
 ln -s default.conf ../sites-enabled
 ```
@@ -256,13 +259,15 @@ cd ../sites-enabled
 ls -la
 lrwxr-xr-x   1 <user>  admin   31  5 jan 12:40 default.conf -> ../sites-available/default.conf
 ```
-Vous voyez cette petite flèche. Elle indique que vous avez créer un lien. :relaxed:
-
-## Configuration fichier hosts
+Vous voyez cette petite flèche. Elle indique que vous avez créer un lien. <br />
+Nous y sommes presque pour une configuration de base. Il va falloir relancer nginx pour appliqué les nouveaux paramètres. Vour pouvez dès à présent lancé votre navigateur safari, chrome, firefox, etc. et écrire dans votre barre d'adresse **http://localhost** :relaxed:<br /><br />
+**Bon à savoir** : Pensez à vider le cache de votre navigateur avant. Et si ca ne fonctionne pas redémarrez votre mac. Parfois il en a besoin !
 
 ## Installation serveur sql
 
 ## Aller plus loin
+### Configuration nginx avec nom de domaine
+### Configuration fichier hosts
 ### SSL
 
 Rendez-vous dans :
