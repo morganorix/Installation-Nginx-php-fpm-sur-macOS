@@ -260,7 +260,12 @@ ls -la
 lrwxr-xr-x   1 <user>  admin   31  5 jan 12:40 default.conf -> ../sites-available/default.conf
 ```
 Vous voyez cette petite flèche. Elle indique que vous avez créer un lien. <br />
-Nous y sommes presque pour une configuration de base. Il va falloir relancer nginx pour appliqué les nouveaux paramètres. Vour pouvez dès à présent lancé votre navigateur safari, chrome, firefox, etc. et écrire dans votre barre d'adresse **[http://localhost](http://localhost)** :relaxed:<br /><br />
+Nous y sommes presque pour une configuration de base. Il va falloir relancer Nginx pour appliqué les nouveaux paramètres. <br />
+Comme ceci :
+```
+brew services restart nginx
+```
+Vour pouvez dès à présent lancer votre navigateur préféré safari, Chrome, Firefox, etc. et écrire dans votre barre d'adresse **[http://localhost](http://localhost)** :relaxed:<br /><br />
 **Bon à savoir** : Pensez à vider le cache de votre navigateur avant. Et si ca ne fonctionne pas redémarrez votre mac. Parfois il en a besoin !
 
 ## Installation serveur sql
