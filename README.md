@@ -219,7 +219,7 @@ Nou allons créer nos autres fichiers de conf dans le dossier **sites-available*
 La raison est simple ! Nous allons faire un système de backup des fichiers de conf. Les fichiers originaux seront dans **sites-available**. Le fichier de lien qui seront lu et exécutés seront dans **sites-enabled**.
 > Oui ok je vois mieux. Mais je ne sais toujours pas ce que c'est un lien ?
 
-On peut dire que c'est une sorte de raccourci vers un autre fichier. Si nous devions le comparer à la vie humaine, imaginez une maison avec des portes. L'une est la porte d'entrée, une autre mène vers un sous-sol, et une porte qui ne semble mené nul part... Maitenant vous souhaitez allez à l'étage. Pas besoin de monter les escalier pour y aller grâce au lien votre porte bizarre au rez-de-chaussé donnera un accès direct à l'étage. Pour le geek c'est un peu comme le jeu **portal**.l<br />
+On peut dire que c'est une sorte de raccourci vers un autre fichier. Si nous devions le comparer à la vie humaine, imaginez une maison avec des portes. L'une est la porte d'entrée, une autre mène vers un sous-sol et une porte qui ne semble mené nul part... Maitenant vous souhaitez allez à l'étage. Pas besoin de monter les escalier pour y aller grâce au lien votre porte bizarre au rez-de-chaussé donnera un accès direct à l'étage. Pour le geek c'est un peu comme le jeu **portal**.<br />
 
 La preuve par l'exemple sera plus pertinente.
 
@@ -256,7 +256,7 @@ cd ../sites-enabled
 ls -la
 lrwxr-xr-x   1 <user>  admin   31  5 jan 12:40 default.conf -> ../sites-available/default.conf
 ```
-Vous voyez cete petite flèche. Elle indique que vous avez créer un lien.
+Vous voyez cette petite flèche. Elle indique que vous avez créer un lien. :relaxed:
 
 ## Configuration fichier hosts
 
