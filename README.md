@@ -214,7 +214,7 @@ Juste avant que vous écrivez vos commandes. Par exemple pour moi c'est :
 
 #### Création des dossiers de conf
 Je n'aime pas avoir un fichier extrêment long à lire. Je préfère en avoir plusieurs, classés dans des dossiers et reliés entre eux.
-Si vous avez été attentif la dernière ligne du fichier nginx.conf est un **include** et il inclus dans un répertoire qui n'existe pas. Nous allons tous créer maintenant. :punch:
+Si vous avez été attentif la dernière ligne du fichier **nginx.conf** est un **include** et il inclus dans un répertoire qui n'existe pas encore. Nous allons tous créer maintenant. :punch:
 
 ```
 cd /usr/local/etc/nginx/
@@ -224,12 +224,12 @@ mkdir -p sites-{enabled,available}
 **mkdir** signifie créer un dossier/répertoire. La commande ci-dessus permet de créer 2 dossiers **sites-enabled** et **sites-available**.
 Nou allons créer nos autres fichiers de conf dans le dossier **sites-available** et nous allons créer des liens dans le dossier **sites-enabled** à partir du contenu du dossier **sites-available**. <br />
 
-> Euhhh tout à fait... mais pourquoi ce compliqué la vie comme ça ?
+> Euhhh tout à fait... mais pourquoi ce compliquer la vie comme ça ?
 
 La raison est simple ! Nous allons faire un système de backup des fichiers de conf. Les fichiers originaux seront dans **sites-available**. Le fichier de lien qui seront lu et exécutés seront dans **sites-enabled**.
 > Oui ok je vois mieux. Mais je ne sais toujours pas ce que c'est un lien ?
 
-On peut dire que c'est une sorte de raccourci vers un autre fichier. Si nous devions le comparer à la vie humaine, imaginez une maison avec des portes. L'une est la porte d'entrée, une autre mène vers un sous-sol et une porte qui ne semble mené nul part... Maitenant vous souhaitez allez à l'étage. Pas besoin de monter les escalier pour y aller grâce au lien votre porte bizarre au rez-de-chaussé donnera un accès direct à l'étage. Pour le geek c'est un peu comme le jeu **portal**.<br />
+On peut dire que c'est une sorte de raccourci vers un autre fichier. Si nous devions le comparer à la réalité, imaginez une maison avec des portes. L'une est la porte d'entrée, une autre mène vers un sous-sol et une porte qui ne semble mené nul part... Maitenant vous souhaitez allez à l'étage. Pas besoin de monter l'escalier pour s'y rendre... grâce au lien votre porte bizarre au rez-de-chaussé donnera un accès direct à l'étage. Pour les geeks c'est un peu comme le jeu **portal**.<br />
 
 La preuve par l'exemple sera plus pertinente.
 
@@ -256,8 +256,9 @@ server {
 }
 
 ```
-Vous voyez la ligne ou il y a écrit **root** ? Eh ben cette ligne sert à désigner le nouveau répertoire de travail que nous avons créer au tout début du tutoriel.<br />
-
+Vous voyez la ligne ou il y a écrit **root** ? Eh ben cette ligne sert à désigner le nouveau répertoire de travail que nous avons créer au tout début du tutoriel.<br /><br />
+**Bon à savoir** : <user> dois être remplacé pour votre nom.
+<br /><br />
 Nous allons enfin créer le lien dans le dossier **sites-enabled/** :
 ```
 ln -s default.conf ../sites-enabled
@@ -274,7 +275,7 @@ Comme ceci :
 ```
 brew services restart nginx
 ```
-Vour pouvez dès à présent lancer votre navigateur préféré safari, Chrome, Firefox, etc. et écrire dans votre barre d'adresse **[http://localhost](http://localhost)** :relaxed:
+Féléciation !! Vous pouvez dès à présent lancer votre navigateur préféré safari, Chrome, Firefox, etc. et écrire dans votre barre d'adresse **[http://localhost](http://localhost)** :relaxed:
 
 ![Aperçu localhost](/images/localhost.png)
 
@@ -282,7 +283,7 @@ Vour pouvez dès à présent lancer votre navigateur préféré safari, Chrome, 
 
 ## Installation serveur Mysql
 Je ne suis pas pour un phpmyadmin. Ca demande trop de ressources inutiles juste pour avoir accès à une base de donnée.
-Pour ma part j'utilise un serveur **Mysql** et **Sequel Pro** pour y accèder.<br />
+Pour ma part, j'utilise un serveur **Mysql** et **Sequel Pro** pour y accèder.<br />
 
 Je le télécharge depuis le site officiel sur ce [lien](https://dev.mysql.com/downloads/mysql/). Prenez la version **dmg** se sera plus simple.
 Ouvrez votre fichier **dmg**.
@@ -298,8 +299,8 @@ Acceptez la **licence**, la **destination** jusqu'à **type d'installation**. A 
 ![Personnalisation de l'installation de Mysql](/images/personnaliser-installation-mysql.png)
 
 Continuer en en cliquant sur **Installer**.
-Une fois l'installation terminée, Vous devez générer un mot de passe pour vous connectez à la base de donnée. Faites attention à bien cocher le bouton : **Use Legacy Password Encryption** !!<br />
-Identifiant par défaut : **root**
+Une fois l'installation terminée, vous devez générer un mot de passe pour vous connectez à la base de donnée. Faites attention à bien cocher le bouton : **Use Legacy Password Encryption** !!<br /><br />
+Identifiant par défaut : **root**<br />
 Mot de passe : **votre mot de passe**
 <br /><br />
 **Bon à savoir** : Pour avoir plus d'infos suivre les instructions sur ce [lien](https://dev.mysql.com/doc/mysql-osx-excerpt/5.7/en/preface.html)<br />
