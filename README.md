@@ -340,7 +340,7 @@ Je vais donc  vous proposez de configurer des noms de domaines supplémentaires 
 
 ### Configuration nginx avec nom de domaine
 Vous vous souvenez du fameux dossier **sites-available/** ? Sinon je vous invite à retrouver ce cours plus [haut](#création-des-dossiers-de-conf).
-donc rendez-vous dans le dossier **sites-available/**. Nous allons dupliquer le fichier **défault.conf** et le modifier.<br />
+Donc rendez-vous dans le dossier **sites-available/**. Nous allons dupliquer le fichier **default.conf** et le modifier.<br />
 
 Et comme vous êtes des fous pour être arrivé si loin :metal:. Je vais utiliser mes [alias](https://github.com/geekoun/Installation-Nginx-php-fpm-sur-macOS/blob/master/.bash_profile) :fire:
 
@@ -350,7 +350,7 @@ cd sites-available/
 cp default.conf toutouyoutou.conf
 nano toutouyoutou.conf
 ```
-Voici à quoi devrait ressembler après modification le fichier.
+Voici à quoi doit ressembler après modification le fichier.
 ```
 server {
     listen       80;
@@ -368,7 +368,7 @@ server {
     }
 }
 ```
-**Bon à savoir** : N'oubliez pas de modifier le <user>... je dis ça... je dis rien... :metal: :fire: :sunglasses:<br /><br />
+**Bon à savoir** : N'oubliez pas de modifier le \<user\>... je dis ça... je dis rien... :metal: :fire: :sunglasses:<br /><br />
 
 > Vas y quoi ! T'as oublié de créer le dossier dans Sites/ !!
 
@@ -386,7 +386,7 @@ brew services restart nginx
 ```
 
 ### Configuration fichier hosts
-Bon ben il reste encore à modifier notre fichier hosts pour faire pointer notre nom de domain (toutouyoutou.fr) vers notre macOSx.
+Bon ben il reste encore à modifier notre fichier **hosts** pour faire pointer notre nom de domain (toutouyoutou.fr) vers notre macOSx.
 
 > Mais What !!!
 
@@ -394,7 +394,7 @@ Ben oui par défaut https://localhost pointe automatiquement. Et nous allons dev
 ```
 host
 ```
-Voici ce que le nano affiche :
+Voici ce que le nano affiche après ajout de la ligne magique :
 ```
 ##
 # Host Database
@@ -414,7 +414,7 @@ Aller hop dernière petite étape et non des moindres...
 
 > Pfff ils sont fous ces romains !
 
-Pour ce faire nous allons créer 2 dossiers supplémentaire dans nginx. Un qui sera un snippet l'autre pour générer le certificat ssl auto-signé. hop hop !!
+Pour ce faire nous allons créer 2 dossiers supplémentaires dans **Nginx**. Un qui sera nommé **snippet** l'autre pour générer le certificat ssl auto-signé, nommé **ssl**. hop hop !!
 ```
 ..nginx
 mkdir -p {snippets,ssl}
