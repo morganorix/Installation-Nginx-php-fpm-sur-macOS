@@ -51,7 +51,7 @@ Puis ajoutez ces 2 lignes suivantes puis **ctrl + x** pour quitter et **Y** ou *
 alias ..nginx="cd /usr/local/etc/nginx/"
 ```
 
-Voici une liste de mes [alias](https://github.com/geekoun/Installation-Nginx-php-fpm-sur-macOS/blob/master/.bash_profile) pour le plus curieux :stuck_out_tongue:<br />
+Voici une liste de mes [alias](https://github.com/geekoun/Installation-Nginx-php-fpm-sur-macOS/blob/master/.bash_profile) pour les plus curieux :stuck_out_tongue:<br />
 
 Rassure-vous je ferai un bel effort dans ce tutoriel pour ne pas utiliser mes raccourci afin que vous ne soyez pas trop perdu. :+1:
 
@@ -116,8 +116,8 @@ brew-php-switcher          php-cs-fixer               phplint                php
 php                        php@7.2                    phpmd                  phpunit
 php-code-sniffer           php@7.3                    phpmyadmin
 ```
-Nous pouvons voir que la version la plus récente est la version **php@7.3**. Il nous reste plus qu'à l'installer.<br />
-Conseils : Même si php-fpm n'est pas affiché distinctement la version de php@7.3 est bien une **fpm**.
+Nous pouvons voir que la version la plus récente est la version **php@7.3**. Il nous reste plus qu'à l'installer.<br /><br />
+**Bon à savoir** : Même si php-fpm n'est pas affiché distinctement la version de php@7.3 est bien une **fpm**.
 ```
 brew install php@7.3
 ```
@@ -247,20 +247,20 @@ server {
 }
 
 ```
-Vous voyez la ligne ou il y a écrit **root** ? Eh ben cette ligne sert à désigner le nouveau répertoire de travail que nous avons créer au tout début du tutoriel.<br /><br />
+Vous voyez la ligne ou il y a écrit **root** ? Eh ben cette ligne sert à désigner le nouveau répertoire de travail que nous avons créer au tout début du tutoriel.<br />
 
-Nous allons enfin créer le lien dans le dossier **sites-enabled** :
+Nous allons enfin créer le lien dans le dossier **sites-enabled/** :
 ```
 ln -s default.conf ../sites-enabled
 ```
-Vous devriez voir ceci dans votre dossier **sites-enabled** :
+Vous devriez voir ceci dans votre dossier **sites-enabled/** :
 ```
 cd ../sites-enabled
 ls -la
 lrwxr-xr-x   1 <user>  admin   31  5 jan 12:40 default.conf -> ../sites-available/default.conf
 ```
 Vous voyez cette petite flèche. Elle indique que vous avez créer un lien. <br />
-Nous y sommes presque pour une configuration de base. Il va falloir relancer nginx pour appliqué les nouveaux paramètres. Vour pouvez dès à présent lancé votre navigateur safari, chrome, firefox, etc. et écrire dans votre barre d'adresse **http://localhost** :relaxed:<br /><br />
+Nous y sommes presque pour une configuration de base. Il va falloir relancer nginx pour appliqué les nouveaux paramètres. Vour pouvez dès à présent lancé votre navigateur safari, chrome, firefox, etc. et écrire dans votre barre d'adresse **[http://localhost](http://localhost)** :relaxed:<br /><br />
 **Bon à savoir** : Pensez à vider le cache de votre navigateur avant. Et si ca ne fonctionne pas redémarrez votre mac. Parfois il en a besoin !
 
 ## Installation serveur sql
