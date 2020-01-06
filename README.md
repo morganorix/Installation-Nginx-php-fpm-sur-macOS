@@ -422,25 +422,25 @@ mkdir -p {snippets,ssl}
 
 #### Certificat
 ```
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ssl/nginx-selfsigned.toutouyoutou.fr.key -out ssl/nginx-selfsigned.toutouyoutou.fr.crt
-openssl dhparam -out ssl/dhparam.toutouyoutou.fr.pem 2048
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ssl/nginx-selfsigned-toutouyoutou.fr.key -out ssl/nginx-selfsigned-toutouyoutou.fr.crt
+openssl dhparam -out ssl/dhparam-toutouyoutou.fr.pem 2048
 ```
 
 #### Snippets
 Nous allons ensuite créer nos snippets et les intégrer en dernière partie dans **toutouyoutou.conf**
 ```
 cd snippets/
-nano /etc/nginx/snippets/self-signed.toutouyoutou.fr.conf
+nano /etc/nginx/snippets/self-signed-toutouyoutou.fr.conf
 ```
 
 Ajoutez ceci ou copiez le [fichier](snippets/self-signed-toutouyoutou.fr.conf) c'est comme vous le souhaitez :
 ```
-ssl_certificate /usr/local/etc/nginx/ssl/nginx-selfsigned.toutouyoutou.fr.crt;
-ssl_certificate_key /usr/local/etc/nginx/ssl/nginx-selfsigned.toutouyoutou.fr.key;
+ssl_certificate /usr/local/etc/nginx/ssl/nginx-selfsigned-toutouyoutou.fr.crt;
+ssl_certificate_key /usr/local/etc/nginx/ssl/nginx-selfsigned-toutouyoutou.fr.key;
 ```
 Nous allons créer le snippet pour le fichier **pem** :
 ```
-nano /etc/nginx/snippets/ssl-params.toutouyoutou.fr.conf
+nano /etc/nginx/snippets/ssl-params-toutouyoutou.fr.conf
 ```
 ET ajoutez ceci ou copiez le [fichier](snippets/ssl-params-toutouyoutou.fr.conf) c'est comme vous le souhaitez :
 ```
@@ -449,7 +449,7 @@ ssl_session_timeout  5m;
 
 ssl_ciphers  HIGH:!aNULL:!MD5;
 ssl_prefer_server_ciphers  on;
-ssl_dhparam /usr/local/etc/nginx/ssl/dhparam.toutouyoutou.fr.pem;
+ssl_dhparam /usr/local/etc/nginx/ssl/dhparam-toutouyoutou.fr.pem;
 ```
 Vou êtes maintenant prêt à passer à la suite. :+1:
 
