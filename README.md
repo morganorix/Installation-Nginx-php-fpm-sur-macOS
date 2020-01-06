@@ -303,7 +303,9 @@ Voici ce que vous devez voir après l'installation.
 
 ![Mysql](/images/mysql.png)
 
-**Bon à savoir** :fist: : Vous pouvez réinitialiser **Mysql**. Ce qui aura pour effet de remettre à zéro et aussi de changer de mot de passe en cliquant sur le bouton : **Initialise Database**.
+**Bon à savoir** :fist: : Vous pouvez réinitialiser **Mysql**. Ce qui aura pour effet de remettre à zéro et aussi de changer de mot de passe en cliquant sur le bouton : **Initialise Database**.<br />
+
+Félicitation !! Vous venez de faire une installation rapide et simple d'un serveur **Mysql**. :relaxed:
 
 # Sequel Pro
 Rendez-vous sur le site officiel et [téléchargez-le](https://sequelpro.com/download).
@@ -319,7 +321,7 @@ Ouvrez-le ensuite et configurer-le comme ceci :
 
 ![Aperçu de la base de donnée](/images/apercu-de-la-bdd.png)
 
-Félicitation !! Vous venez de faire une installation rapide et simple d'un serveur **Mysql** ainsi qu'un interpreteur pour lire vos bases de données en 2 temps 3 mouvements. :relaxed:
+Félicitation !! Vous venez de faire une installation rapide et simple d'un interpreteur pour lire vos bases de données en 2 temps 3 mouvements. :relaxed:
 
 ## Aller plus loin
 ### Configuration nginx avec nom de domaine
