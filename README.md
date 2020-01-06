@@ -485,4 +485,15 @@ server {
     }
 }
 ```
-Vous pouvez relancer le fichier
+Il ne reste plus qu'a recharger le **Nginx** :
+```
+brew services restart nginx
+```
+
+ETTTTT tadammm :
+
+![https://audrey.ooo](/images/audrey.ooo.png)
+
+Cliquez sur : **Continuer vers le site audrey.ooo (dangereux)**. Comme le certificat n'est pas valide le navigateur affichera un message d'alerte. Vous pouvez enregistrer le certificat sur votre mac et le valider pour éviter d'autre soucis. :relaxed:
+
+![https://audrey.ooo](/images/apercu-audrey.ooo.png)
