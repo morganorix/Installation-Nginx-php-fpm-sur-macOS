@@ -279,12 +279,14 @@ Pour ma part j'utilise un serveur **Mysql** et **Sequel Pro** pour y accèder.
 
 ### Installation Mysql
 Je le télécharge depuis le site officiel sur ce lien [https://dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/). Prenez la version **.dmg** se sera plus simple.
-Suivez les instructions d'installation. :fist:<br /><br />
+Suivez les instructions d'installation. :fist:<br />
 
-**Bon à savoir** : Suivre les instruction sur ce lien [https://dev.mysql.com/doc/mysql-osx-excerpt/5.7/en/preface.html](https://dev.mysql.com/doc/mysql-osx-excerpt/5.7/en/preface.html)<br /><br />
+**Bon à savoir** : Suivre les instruction sur ce lien [https://dev.mysql.com/doc/mysql-osx-excerpt/5.7/en/preface.html](https://dev.mysql.com/doc/mysql-osx-excerpt/5.7/en/preface.html)<br />
 
 Voici ce que vous devrez voir après l'installation.
+
 ![Aperçu préférence système](/images/apercu-preference-systeme.png)
+
 ![Mysql](/images/mysql.png)
 
 ### Sequel Pro
