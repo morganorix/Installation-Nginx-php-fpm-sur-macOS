@@ -290,11 +290,11 @@ Voici ce que vous devez voir après l'installation.
 ![Mysql](/images/mysql.png)
 
 ### Sequel Pro
-Rendez-vous sur le site officiel et téléchargez-le. [https://sequelpro.com/download](https://sequelpro.com/download).
+Rendez-vous sur le site officiel et [téléchargez-le](https://sequelpro.com/download).
 Une fois téléchargé, copié le dans **Applications**.
 Ouvrez-le ensuite et configurer-le comme ceci :
 
-![Sequel Pro Configuration](/images/sequel-pro-conf.png)
+![Sequel Pro Configuration](/images/sequel-pro-configuration.png)
 
 ![Aperçu de la base de donnée](/images/apercu-de-la-bdd.png)
 
