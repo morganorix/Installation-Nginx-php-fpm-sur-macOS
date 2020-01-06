@@ -12,9 +12,10 @@
     * [Dossier de travail](#dossier-de-travail)
     * [nginx.conf](#nginx.conf)
     * [Création des dossiers de conf](#création-des-dossiers-de-conf)
-    * [SSL](#ssl)
 * [Configuration fichier hosts](#configuration-fichier-hosts)
 * [Installation serveur sql](#installation-serveur-sql)
+* [Aller plus loin](#aller-plus-loin)
+  * [SSL](#ssl)
 
 ## Introduction
 Par défaut macOSx à un serveur non actif Apache pré-installé ainsi qu'un serveur php (il n'y a pas de serveur sql de pré-installé). Si vous êtes comme moi, je préfère de loin un serveur Nginx. De plus les versions sont pas forcément à jour sur votre mac. Autant de raisons qui font que ne nous voulons pas les activer.<br />
@@ -216,6 +217,10 @@ Nou allons créer nos autres fichiers de conf dans le dossier **sites-available*
 > Euhhh tout à fait... mais pourquoi ce compliqué la vie comme ça ?
 
 La raison est simple ! Nous allons faire un système de backup des fichiers de conf. Les fichiers originaux seront dans **sites-available**. Le fichier de lien qui seront lu et exécutés seront dans **sites-enabled**.
+> Oui ok je vois mieux. Mais je ne sais toujours pas ce que c'est un lien ?
+
+On peut dire que c'est une sorte de raccourci vers un autre fichier. Si nous devions le comparer à la vie humaine, imaginez une maison avec des portes. L'une est la porte d'entrée, une autre mène vers un sous-sol, et une porte qui ne semble mené nul part... Maitenant vous souhaitez allez à l'étage. Pas besoin de monter les escalier pour y aller grâce au lien votre porte bizarre au rez-de-chaussé donnera un accès direct à l'étage. Pour le geek c'est un peu comme le jeu **portal**.l<br />
+
 La preuve par l'exemple sera plus pertinente.
 
 ```
@@ -251,12 +256,15 @@ cd ../sites-enabled
 ls -la
 lrwxr-xr-x   1 <user>  admin   31  5 jan 12:40 default.conf -> ../sites-available/default.conf
 ```
-#### SSL
-
-Rendez-vous dans :
-```
-```
+Vous voyez cete petite flèche. Elle indique que vous avez créer un lien.
 
 ## Configuration fichier hosts
 
 ## Installation serveur sql
+
+## Aller plus loin
+### SSL
+
+Rendez-vous dans :
+```
+```
