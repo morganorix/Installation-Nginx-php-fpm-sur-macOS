@@ -14,8 +14,8 @@
     * [Création des dossiers de conf](#création-des-dossiers-de-conf)
 * [Installation serveur Mysql](#installation-serveur-mysql)
   * [Installation Mysql](#installation-mysql)
-  * [Sequel Pro](#sequel-pro)
-    * [Configuration Sequel Pro](#configuration-sequel-pro)
+* [Sequel Pro](#sequel-pro)
+  * [Configuration Sequel Pro](#configuration-sequel-pro)
 * [Aller plus loin](#aller-plus-loin)
   * [Configuration nginx avec nom de domaine](#configuration-nginx-avec-nom-de-domaine)
   * [Configuration fichier hosts](#configuration-fichier-hosts)
@@ -305,13 +305,13 @@ Voici ce que vous devez voir après l'installation.
 
 ![Mysql](/images/mysql.png)
 
-**Bon à savoir** :fist: : Vous pouvez réinitialiser **Mysql**. Ce qui aura pour effet de remettre à zéro et aussi de changer de mot de passe en cliquant sur le bouton : **Initialise Database**
+**Bon à savoir** :fist: : Vous pouvez réinitialiser **Mysql**. Ce qui aura pour effet de remettre à zéro et aussi de changer de mot de passe en cliquant sur le bouton : **Initialise Database**.
 
-### Sequel Pro
+# Sequel Pro
 Rendez-vous sur le site officiel et [téléchargez-le](https://sequelpro.com/download).
-Une fois téléchargé, copié le dans **Applications**.
+Une fois téléchargé, copiez-le dans **Applications**.
 
-#### Configuration Sequel Pro
+## Configuration Sequel Pro
 Ouvrez-le ensuite et configurer-le comme ceci :
 
 ![Sequel Pro Configuration](/images/sequel-pro-conf.png)
