@@ -13,7 +13,6 @@
     * [nginx.conf](#nginx.conf)
     * [Création des dossiers de conf](#création-des-dossiers-de-conf)
 * [Installation serveur Mysql](#installation-serveur-mysql)
-  * [Installation Mysql](#installation-mysql)
 * [Sequel Pro](#sequel-pro)
   * [Configuration Sequel Pro](#configuration-sequel-pro)
 * [Aller plus loin](#aller-plus-loin)
@@ -276,9 +275,8 @@ Vour pouvez dès à présent lancer votre navigateur préféré safari, Chrome, 
 
 ## Installation serveur Mysql
 Je ne suis pas pour un phpmyadmin. Ca demande trop de ressources inutiles juste pour avoir accès à une base de donnée.
-Pour ma part j'utilise un serveur **Mysql** et **Sequel Pro** pour y accèder.
+Pour ma part j'utilise un serveur **Mysql** et **Sequel Pro** pour y accèder.<br />
 
-### Installation Mysql
 Je le télécharge depuis le site officiel sur ce [lien](https://dev.mysql.com/downloads/mysql/). Prenez la version **dmg** se sera plus simple.
 Ouvrez votre fichier **dmg**.
 
