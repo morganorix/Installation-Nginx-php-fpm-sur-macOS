@@ -1,4 +1,4 @@
-# Installation de Nginx, de Php-fpm et Sql sur macOSx
+# Installation de Nginx, de Php-fpm et Mysql sur macOSx
 
 ## Sommaire
 * [Introduction](#introduction)
@@ -20,7 +20,7 @@
 
 ## Introduction
 Par défaut macOSx à un serveur non actif Apache pré-installé ainsi qu'un serveur php (il n'y a pas de serveur sql de pré-installé). Si vous êtes comme moi, je préfère de loin un serveur Nginx. De plus les versions sont pas forcément à jour sur votre mac. Autant de raisons qui font que ne nous voulons pas les activer.<br />
-Grâce à **Homebrew** nous pouvons installer un serveur **Nginx**, serveur **Php-fpm** et serveur **MySql** à jour et facile à maintenir.
+Grâce à **Homebrew** nous pouvons installer un serveur **Nginx**, serveur **Php-fpm** et serveur **Mysql** à jour et facile à maintenir.
 
 ## Préparation
 Je ne sais pas pour vous, de mon côté j'aime travailler dans un minimum de confort et pouvoir entrer des commandes facile et personnalisées avec un terminal un peu custom.<br />
