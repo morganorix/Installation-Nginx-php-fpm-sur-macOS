@@ -177,7 +177,7 @@ cd /usr/local/etc/nginx/
 mv nginx.conf nginx.conf.bak
 nano nginx.conf
 ```
-Insérez les lignes du fichiers [nginx.conf](nginx.conf) ou copiez le fichier directement dans le répertoire, c'est comme vous le souhaitez.
+Insérez les lignes du fichiers [nginx.conf](nginx.conf) ou copiez le fichier directement dans le répertoire **nginx/**, c'est comme vous le souhaitez.
 
 ```
 user                    <user> staff;
@@ -202,17 +202,27 @@ http {
 ```
 
 #### Création des dossiers de conf
-Si vous avez été attentif la dernière ligne du fichier nginx.conf est un include et il inclus dans un répertoire qui n'existe pas. Nous allons tous créer maintenant. :punch:
+Je n'aime pas avoir un fichier extrêment long à lire. Je préfère en avoir plusieurs, classés dans des dossiers et reliés entre eux.
+Si vous avez été attentif la dernière ligne du fichier nginx.conf est un **include** et il inclus dans un répertoire qui n'existe pas. Nous allons tous créer maintenant. :punch:
 
 ```
 cd /usr/local/etc/nginx/
 rm -r servers/
 mkdir -p sites-{enabled,available}
+```
+**mkdir** signifie créer un dossier/répertoire. La commande ci-dessus permet de créer 2 dossiers **sites-enabled** et **sites-available**.
+Nou allons créer nos autres fichiers de conf dans le dossier **sites-available** et nous allons créer des liens dans le dossier **sites-enabled** à partir du contenu du dossier **sites-available**. <br />
+
+> Euhhh tout à fait... mais pourquoi ce compliqué la vie comme ça ?
+
+La raison est simple ! Nous allons faire un système de backup des fichiers de conf. Les fichiers originaux seront dans **sites-available**. Le fichier de lien qui seront lu et exécutés seront dans **sites-enabled**.
+La preuve par l'exemple sera plus pertinente.
+
+```
 cd sites-available
 nano default.conf
 ```
-Insérez les lignes du fichiers [default.conf](sites-available/default.conf) ou copiez le fichier directement dans le répertoire, c'est comme vous le souhaitez.
-
+Insérez les lignes du fichiers [default.conf](sites-available/default.conf) ou copiez le fichier directement dans le répertoire **sites-available/**, c'est comme vous le souhaitez.
 ```
 server {
     listen       80;
@@ -231,7 +241,16 @@ server {
 }
 
 ```
-
+Enfin nous allons créer le lien dans le dossier **sites-enabled** :
+```
+ln -s default.conf ../sites-enabled
+```
+Vous devriez voir ceci dans votre dossier **sites-enabled** :
+```
+cd ../sites-enabled
+ls -la
+lrwxr-xr-x   1 <user>  admin   31  5 jan 12:40 default.conf -> ../sites-available/default.conf
+```
 #### SSL
 
 Rendez-vous dans :
