@@ -279,25 +279,25 @@ Je ne suis pas pour un phpmyadmin. Ca demande trop de ressources inutiles juste 
 Pour ma part j'utilise un serveur **Mysql** et **Sequel Pro** pour y accèder.
 
 ### Installation Mysql
-Je le télécharge depuis le site officiel sur ce [lien](https://dev.mysql.com/downloads/mysql/). Prenez la version **.dmg** se sera plus simple.
-Ouvrez votre fichier **dmg**
+Je le télécharge depuis le site officiel sur ce [lien](https://dev.mysql.com/downloads/mysql/). Prenez la version **dmg** se sera plus simple.
+Ouvrez votre fichier **dmg**.
 
 ![Ouverture du dmg](/images/ouverture-install-mysql.png)
 
-Il y a un petit avertissement. Cliquez sur **Continuer**
+Il y a un petit avertissement. Cliquez sur **Continuer**.
 
 ![Avertissement installation de Mysql](/images/avertissement-install-mysql.png)
 
-Acceptez la licence, la destination jusqu'à type d'installation. A cette étape si vous cliquez sur le bouton **Personnaliser** vous pourrez voir ce qui sera installé.
+Acceptez la **licence**, la **destination** jusqu'à **type d'installation**. A cette étape si vous cliquez sur le bouton **Personnaliser** vous pourrez voir ce qui sera installé.
 
 ![Personnalisation de l'installation de Mysql](/images/personnaliser-installation-mysql.png)
 
 Continuer en en cliquant sur **Installer**.
-Une fois l'sintallation terminée, Vous devrez générer un mot de passe pour vous connectez à la base de donnée. Fait attention à bien coché le bouton : **Use Legacy Password Encryption** !!
+Une fois l'installation terminée, Vous devez générer un mot de passe pour vous connectez à la base de donnée. Faites attention à bien cocher le bouton : **Use Legacy Password Encryption** !!<br />
 Identifiant par défaut : **root**
 Mot de passe : **votre mot de passe**
-<br />
-**Bon à savoir** : Suivre les instructions sur ce lien [https://dev.mysql.com/doc/mysql-osx-excerpt/5.7/en/preface.html](https://dev.mysql.com/doc/mysql-osx-excerpt/5.7/en/preface.html)<br />
+<br /><br />
+**Bon à savoir** : Pour avoir plus d'infos suivre les instructions sur ce [lien](https://dev.mysql.com/doc/mysql-osx-excerpt/5.7/en/preface.html)<br />
 
 Voici ce que vous devez voir après l'installation.
 
