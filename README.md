@@ -260,7 +260,7 @@ ls -la
 lrwxr-xr-x   1 <user>  admin   31  5 jan 12:40 default.conf -> ../sites-available/default.conf
 ```
 Vous voyez cette petite flèche. Elle indique que vous avez créer un lien. <br /><br />
-Nous y sommes presque pour une configuration de base. Il va falloir relancer Nginx pour appliqué les nouveaux paramètres. <br />
+Nous y sommes presque pour une configuration de base. Il va falloir relancer **Nginx** pour appliqué les nouveaux paramètres. <br />
 Comme ceci :
 ```
 brew services restart nginx
