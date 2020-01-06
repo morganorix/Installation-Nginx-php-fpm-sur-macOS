@@ -15,6 +15,7 @@
 * [Installation serveur Mysql](#installation-serveur-mysql)
   * [Installation Mysql](#installation-mysql)
   * [Sequel Pro](#sequel-pro)
+    * [Configuration Sequel Pro](#configuration-sequel-pro)
 * [Aller plus loin](#aller-plus-loin)
   * [Configuration nginx avec nom de domaine](#configuration-nginx-avec-nom-de-domaine)
   * [Configuration fichier hosts](#configuration-fichier-hosts)
@@ -278,9 +279,24 @@ Je ne suis pas pour un phpmyadmin. Ca demande trop de ressources inutiles juste 
 Pour ma part j'utilise un serveur **Mysql** et **Sequel Pro** pour y accèder.
 
 ### Installation Mysql
-Je le télécharge depuis le site officiel sur ce lien [https://dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/). Prenez la version **.dmg** se sera plus simple.
-Suivez les instructions d'installation. :fist:<br />
+Je le télécharge depuis le site officiel sur ce [lien](https://dev.mysql.com/downloads/mysql/). Prenez la version **.dmg** se sera plus simple.
+Ouvrez votre fichier **dmg**
 
+![Ouverture du dmg](/images/ouverture-install-mysql.png)
+
+Il y a un petit avertissement. Cliquez sur **Continuer**
+
+![Avertissement installation de Mysql](/images/avertissement-install-mysql.png)
+
+Acceptez la licence, la destination jusqu'à type d'installation. A cette étape si vous cliquez sur le bouton **Personnaliser** vous pourrez voir ce qui sera installé.
+
+![Personnalisation de l'installation de Mysql](/images/personnaliser-installation-mysql.png)
+
+Continuer en en cliquant sur **Installer**.
+Une fois l'sintallation terminée, Vous devrez générer un mot de passe pour vous connectez à la base de donnée. Fait attention à bien coché le bouton : **Use Legacy Password Encryption** !!
+Identifiant par défaut : **root**
+Mot de passe : **votre mot de passe**
+<br />
 **Bon à savoir** : Suivre les instructions sur ce lien [https://dev.mysql.com/doc/mysql-osx-excerpt/5.7/en/preface.html](https://dev.mysql.com/doc/mysql-osx-excerpt/5.7/en/preface.html)<br />
 
 Voici ce que vous devez voir après l'installation.
@@ -289,15 +305,19 @@ Voici ce que vous devez voir après l'installation.
 
 ![Mysql](/images/mysql.png)
 
+**Bon à savoir** :fist: : Vous pouvez réinitialiser **Mysql**. Ce qui aura pour effet de remettre à zéro et aussi de changer de mot de passe en cliquant sur le bouton : **Initialise Database**
+
 ### Sequel Pro
 Rendez-vous sur le site officiel et [téléchargez-le](https://sequelpro.com/download).
 Une fois téléchargé, copié le dans **Applications**.
+
+#### Configuration Sequel Pro
 Ouvrez-le ensuite et configurer-le comme ceci :
 
 ![Sequel Pro Configuration](/images/sequel-pro-conf.png)
 1. Cliquez sur le petit bouton **+**
 2. Entrez un nom par exemple : **Local**
-3. Insérez les informations de connexion à votre base de donnée. Le mot de passe et celui que vous avez entré pendant l'installation de **Mysql**.
+3. Insérez les informations de connexion à votre base de donnée. Le mot de passe est celui que vous avez entré pendant l'installation de **Mysql**.
 
 ![Aperçu de la base de donnée](/images/apercu-de-la-bdd.png)
 
