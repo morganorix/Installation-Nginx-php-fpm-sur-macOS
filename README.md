@@ -294,7 +294,10 @@ Rendez-vous sur le site officiel et [téléchargez-le](https://sequelpro.com/dow
 Une fois téléchargé, copié le dans **Applications**.
 Ouvrez-le ensuite et configurer-le comme ceci :
 
-![Sequel Pro Configuration](/images/sequel-pro-configuration.png)
+![Sequel Pro Configuration](/images/sequel-pro-conf.png)
+1. Cliquez sur le petit bouton **+**
+2. Entrez un nom par exemple : **Local**
+3. Insérez les informations de connexion à votre base de donnée. Le mot de passe et celui que vous avez entré pendant l'installation de **Mysql**.
 
 ![Aperçu de la base de donnée](/images/apercu-de-la-bdd.png)
 
