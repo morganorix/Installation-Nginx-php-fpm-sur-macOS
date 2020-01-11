@@ -393,7 +393,7 @@ Bon ben il reste encore à modifier notre fichier **hosts** pour faire pointer n
 
 Ben oui par défaut https://localhost pointe automatiquement. Et nous allons devoir aider un peut pour que ca pointe correctement sur notre nouveau nom de doamine.<br /> Comme ceci :
 ```
-host
+hosts
 ```
 Voici ce que le nano affiche après ajout de la ligne magique :
 ```
