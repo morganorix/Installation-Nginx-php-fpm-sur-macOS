@@ -355,7 +355,7 @@ Voici à quoi doit ressembler après modification le fichier.
 ```
 server {
     listen       80;
-    server_name  toutouyoutou.fr;
+    server_name  audrey.ooo;
     root         /Users/<user>/Sites/www.audrey.ooo/;
     index        index.php index.html index.htm;
 
@@ -391,7 +391,7 @@ Bon ben il reste encore à modifier notre fichier **hosts** pour faire pointer n
 
 > Mais What !!!
 
-Ben oui par défaut https://localhost pointe automatiquement. Et nous allons devoir aider un peut pour que ca pointe correctement sur notre nouveau nom de doamine.<br /> Comme ceci :
+Ben oui par défaut http://localhost pointe automatiquement. Et nous allons devoir aider un peut pour que ca pointe correctement sur notre nouveau nom de doamine.<br /> Comme ceci :
 ```
 hosts
 ```
