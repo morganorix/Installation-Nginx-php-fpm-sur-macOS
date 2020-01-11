@@ -441,7 +441,7 @@ ssl_certificate_key /usr/local/etc/nginx/ssl/nginx-selfsigned.www.audrey.ooo.key
 ```
 Nous allons créer le snippet pour le fichier **pem** :
 ```
-nano /etc/nginx/snippets/ssl-params-www.audrey.ooo.conf
+nano /etc/nginx/snippets/ssl-params.www.audrey.ooo.conf
 ```
 ET ajoutez ceci ou copiez le [fichier](snippets/ssl-params.www.audrey.ooo.conf) c'est comme vous le souhaitez :
 ```
